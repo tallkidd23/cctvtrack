@@ -2,25 +2,24 @@
 
 Experimental browser-based truck-roof tracking and perspective projection of paludarium video onto moving vehicles.
 
-## Build 002
+## Build 003
 
-Build 002 adds a manual-assisted perspective projection workflow:
+Build 003 adds a CCTV source layer with a Peace Bridge preset:
 
-1. Open the page.
-2. Click four visible corners of a truck roof in clockwise order.
-3. Once the roof plane is locked, drag any corner to calibrate it.
-4. Adjust opacity, brightness, scanlines, and blend mode.
-5. Optionally load another browser-readable video URL.
-6. Clear or reset the target as needed.
+- `PEACE BRIDGE // CANADA-BOUND TRUCK INSPECTION`
+- `LOCAL TEST VIDEO / NO CCTV`
+- `CUSTOM EMBED URL`
 
-The projection is rendered with a four-corner homography approximation directly in the browser canvas. The prototype is intentionally manual-assisted; automatic truck detection and motion tracking are future stages.
+The Peace Bridge preset opens the Buffalo and Fort Erie Bridge Authority traffic-camera page as a visual iframe source. The projection canvas remains above it, so the user can manually select four visible truck-roof corners and project the paludarium signal.
+
+Because a cross-origin iframe cannot be read directly by the canvas, this build does not claim automatic pixel tracking from the Peace Bridge webpage. Direct tracking will require an authorized HLS, WebRTC, or same-origin video source.
 
 ## Roadmap
 
-- Improve WebGL performance for high-resolution sources.
+- Use a directly accessible authorized CCTV video source.
+- Improve high-resolution rendering with WebGL.
 - Add manual-assisted feature tracking.
 - Add truck detection and target IDs.
-- Add live CCTV source configuration.
-- Deploy under a separate `cctvtrack.tallkidd.com` address.
+- Deploy under `cctvtrack.tallkidd.com`.
 
 This project is separate from `cctv.tallkidd.com`.
