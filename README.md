@@ -2,17 +2,17 @@
 
 Experimental browser-based truck-roof tracking and perspective projection of paludarium video onto moving vehicles.
 
-## Build 003
+## Build 004
 
-Build 003 adds a CCTV source layer with a Peace Bridge preset:
+The default CCTV sources are now Laredo / Nuevo Laredo bridge-camera portals:
 
-- `PEACE BRIDGE // CANADA-BOUND TRUCK INSPECTION`
-- `LOCAL TEST VIDEO / NO CCTV`
-- `CUSTOM EMBED URL`
+- Laredo // Puente 2 / Juárez-Lincoln
+- Nuevo Laredo // Puente 3 / Colombia Solidarity
+- Laredo // Puente 4 / World Trade
+- Local test video
+- Custom embed URL
 
-The Peace Bridge preset opens the Buffalo and Fort Erie Bridge Authority traffic-camera page as a visual iframe source. The projection canvas remains above it, so the user can manually select four visible truck-roof corners and project the paludarium signal.
-
-Because a cross-origin iframe cannot be read directly by the canvas, this build does not claim automatic pixel tracking from the Peace Bridge webpage. Direct tracking will require an authorized HLS, WebRTC, or same-origin video source.
+The bridge presets use a visual portal iframe. Depending on the provider, the page may show refreshed camera images or an embedded view rather than a continuous browser-readable stream. Because a cross-origin iframe cannot be read directly by the canvas, this build does not claim automatic pixel tracking from the portal. Direct tracking will require an authorized HLS, WebRTC, or same-origin video source.
 
 ## Roadmap
 
