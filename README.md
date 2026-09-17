@@ -2,23 +2,25 @@
 
 Experimental browser-based truck-roof tracking and perspective projection of paludarium video onto moving vehicles.
 
-## Build 001
+## Build 002
 
-The first prototype is intentionally manual-assisted:
+Build 002 adds a manual-assisted perspective projection workflow:
 
 1. Open the page.
 2. Click four visible corners of a truck roof in clockwise order.
-3. Adjust opacity, brightness, and scanlines.
-4. Clear or reset the target as needed.
+3. Once the roof plane is locked, drag any corner to calibrate it.
+4. Adjust opacity, brightness, scanlines, and blend mode.
+5. Optionally load another browser-readable video URL.
+6. Clear or reset the target as needed.
 
-The current projection preview uses a rectangular approximation inside the selected quadrilateral. Future builds can add true projective warping, feature tracking, automatic truck detection, and live CCTV input.
+The projection is rendered with a four-corner homography approximation directly in the browser canvas. The prototype is intentionally manual-assisted; automatic truck detection and motion tracking are future stages.
 
-## Planned roadmap
+## Roadmap
 
-- True four-corner homography warp using canvas/WebGL.
-- Manual-assisted motion tracking.
-- Truck detection and target IDs.
-- Live CCTV source configuration.
-- Cloudflare or GitHub Pages deployment under a separate cctvtrack subdomain.
+- Improve WebGL performance for high-resolution sources.
+- Add manual-assisted feature tracking.
+- Add truck detection and target IDs.
+- Add live CCTV source configuration.
+- Deploy under a separate `cctvtrack.tallkidd.com` address.
 
 This project is separate from `cctv.tallkidd.com`.
